@@ -4,19 +4,21 @@ import { FaAngleDown } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const SidebarMenu = ({ showAnimation, route, isOpen }) => {
-  const menuAnimation = {
+ const menuAnimation = {
     hidden: {
       heigth: 0,
       opacity: 0,
       transition: {
-        duration: 0.5
+        duration: 0.3,
+        when: "afterChildren"
       }
     },
     show: {
       height: "auto",
       opacity: 1,
       transition: {
-        duration: 0.2
+        duration: 0.3,
+        when: "beforeChildren"
       }
     }
   };
